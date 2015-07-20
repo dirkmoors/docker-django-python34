@@ -82,8 +82,7 @@ RUN chown -R www-data ${ROOT}
 ADD ${CONFSRC} ${CONFDIR}
 ADD ${SCRIPTSSRC} ${SCRIPTSDIR}
 
-# add app files, only on build
-ONBUILD ADD ${APPSRC} ${APPDIR}
+# add requirements files, only on build
 ONBUILD ADD ${DEPLOYMENTSRC} ${DEPLOYMENTDIR}
 
 # expose http port
